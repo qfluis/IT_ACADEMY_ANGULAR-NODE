@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+$gris: rgb(56, 56, 56);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    background-image: url("./assets/stars_desktop.jpeg");
+    background-attachment: fixed;
+   
+    color: white;
+}
+main {
+    max-width: 1400px;
+    margin: 0 auto 0 auto;
+}
+
+.contenedor-outlet{
+    //text-align: center;
+	position: relative;
+}
+
+button {
+    background-color: $gris;
+    border:none;
+    padding:10px;
+    color: white;
+    margin: 5px;
+    cursor:pointer;
+
+    transition: all 0.5s ease-in-out;
+    
+    &:hover{
+        background-color: white;
+        color:black;
+    }
+}
+
+.header{
+    margin-bottom: 10px;
+}
+
+.header__img{
+    display:block;
+    margin: 0 auto 0 auto;
+}
+
+.header__login-buttons{
+    display:flex;  
+    justify-content: end;  
+    
+    position:relative;
+    top: -75px;
+}
+
+.header__page-buttons {
+    display:flex;
+    justify-content:Center;
+    border-bottom: 2px solid white;
+    //z-index: 5;
+}
+.header__page-buttons button{
+    margin-bottom:-0.5px;
+    border:none;
+    //z-index: -1;
+}
+.header__page__button--active{
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 550px) {
+    .header__login-buttons{
+        justify-content: center;
+        top:0px;
+    }
+    body{
+        background-image: url("./assets/stars_mobile.jpeg");
+    }
+    
+}
+

@@ -1,0 +1,45 @@
+section {
+    width: 80%;
+    /*height:700px;*/
+    background-color: rgb(0, 247, 255);
+    margin: 0px auto;
+ 
+
+    display: flex;
+    /* Puede tomar los valores de row, row-reverse, column y column-reverse */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-flow: row wrap;    HACE LO MISMO QUE LAS DOS LINEAS ANTERIORES */
+    
+    /* flex-start flex-end center stretch baseline */
+    justify-content: center;
+    /* flex-start flex-end center stretch baseline */
+    align-items: center;
+
+    gap: 15px;
+}
+
+article {
+    /*width: 200px;
+    height: 200px;*/
+    border:1px solid black;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(255, 202, 202);
+    flex-grow: 1;
+    flex-basis: 200px;
+    
+    
+    /* align-self:center; */
+}
+
+.grande {
+    flex-grow: 10;
+    order:-1;
+}
+.pequeño {
+    flex-grow: 0;
+    flex-shrink: 10;
+    flex-basis: 120px;
+    /* flex: 0 10 120px; */
+}

@@ -1,0 +1,6 @@
+<div class="lista">
+        <div (click)="detalleNave( nave.name )" class="lista__nave" *ngFor="let nave of listaNaves"  >
+                {{nave.name.toUpperCase()}}<br><small>{{nave.model}} </small>
+        </div>
+</div>
+<button *ngIf="!allShipsCharged" class="more__button" (click)="nextPage()">View more</button>

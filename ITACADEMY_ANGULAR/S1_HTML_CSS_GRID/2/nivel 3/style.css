@@ -1,0 +1,332 @@
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    max-width: 1600px;
+    /*background-color: white;*/
+    margin-left: auto;
+    margin-right: auto;    
+}
+#logo {    
+    grid-area: Logo;
+}
+#logo img {
+    width:5rem;
+}
+#barra_superior {
+    display:grid;
+    grid-template-areas: "Logo Menu Redes";
+
+    align-items: center;
+
+    font-size: 1.2rem;
+    color: #808080;
+
+    padding:1rem;
+
+    animation: aparecerTop 1s;
+}
+
+#barra_superior a {
+    text-decoration: none;
+    color: #808080;
+
+    transition: 0.75s;
+
+}
+nav {
+    grid-area: Menu;    
+}
+
+nav ul{
+    padding-left:0px;
+
+    display:grid;
+    grid-template-areas: "Inicio Rutas Hoteles Vuelos Contacto";
+                            
+    list-style-type:none;    
+}
+
+.Inicio{
+    grid-area: Inicio;
+}
+.Rutas{
+    grid-area: Rutas;
+}
+.Hoteles{
+    grid-area: Hoteles;
+}
+.Vuelos{
+    grid-area: Vuelos;
+}
+.Contacto{
+    grid-area: Contacto;
+}
+
+
+nav ul li {
+    text-align: center;
+
+    transition: border-color 0.75s;    
+}
+
+nav ul li i {
+    margin-right:0.3rem;
+}
+
+nav ul li a:hover {
+    color: #ee7463 !important;
+    text-decoration: underline !important;
+}
+
+#redes {
+    grid-area:Redes;
+    display: grid;    
+    grid-template-areas: "Facebook Twitter";
+    grid-gap:1rem;
+    margin-left:auto;
+}
+#redes .Facebook{
+    grid-area: "Facebook";
+}
+#redes .Twitter{
+    grid-area: "Twitter";
+}
+
+#redes div a:hover {
+    color: #ee7463;
+}
+
+#banner {
+    background-image: url("images/header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height:20rem;   
+    
+    text-align: center;
+
+    animation: aparecerCentro 0.5s;
+}
+
+#banner p {
+    width:80%;
+    height:2.8rem;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 11rem;
+    padding: 2.5rem;    
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: rgba(238,116,99,0.8);
+    background-color: rgba(128,128,128,0.3);
+    /*opacity:0.8;*/    
+}
+
+#contenido {    
+    margin-top: 0.5rem;
+    display:grid;
+    grid-gap:0.5rem;
+    grid-template-areas: "Articulos Articulos Articulos Articulos Lateral";
+
+    animation: aparecerBottom 1s;
+
+}
+
+#articulos {
+    background-color: #d8d7d7;
+    grid-area: Articulos;
+
+
+    display:grid;
+    grid-template-areas: "cultura gastronomia"
+                        "turismo vida_nocturna"
+                        "pie pie";
+    
+    grid-gap: 0.5rem;
+
+    padding: 0.5rem;
+}
+#articulos .cultura{
+    grid-area: cultura;
+}
+
+#articulos .gastronomia {
+    grid-area: gastronomia;
+}
+
+#articulos .turismo {
+    grid-area: turismo;
+}
+
+#articulos .vida_nocturna {
+    grid-area: vida_nocturna;
+}
+
+#articulos article {
+    
+    padding: 0.5rem;
+    background-color: #f5f1f1;
+}
+#articulos article img{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+}
+.fecha {
+    color: #ebd790;
+    margin-top: -1.5rem;
+    margin-left: 0.2rem;
+}
+#articulos article h3 {
+    background-color: #ee7463;
+    color: white;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    margin-top:-0.7rem;
+    margin-bottom:0rem;
+}
+.columnas {
+    display:grid;
+    grid-template-areas: "col1 col2";
+    grid-gap:1rem;
+}
+.columnas .col1 {
+    grid-area: col1;
+}
+
+.columnas .col2{
+    grid-area: col2;
+}
+
+.leer_mas {
+    margin-top:0rem;
+    margin-bottom:0rem;
+}
+
+.leer_mas a {
+    text-decoration: none;
+    color: #808080;
+    transition: 0.75s;
+}
+
+.leer_mas a:hover {
+    color: #ee7463;
+}
+
+#pie {
+    text-align: center;
+    grid-area: pie;
+}
+
+aside {
+    background-color: #d8d7d7;
+    grid-area: Lateral;
+
+    text-align: center;
+    padding:0.5rem;
+}
+
+footer {
+    text-align: center;
+    background-color: #f5f1f1;
+    
+    padding:0.5rem;
+    margin-top:0.5rem;
+    border-left: 0.5rem solid #d8d7d7;
+    border-right: 0.5rem solid #d8d7d7;
+}
+
+/* TABLET */
+@media all and (max-width: 992px) { /*992 */
+    #barra_superior {
+        font-size: 1rem;
+    }
+
+    #contenido {    
+        grid-template-areas: 
+            "Articulos Articulos Articulos Articulos Articulos"
+            "Lateral Lateral Lateral Lateral Lateral";
+    }
+
+}
+
+/* MOVIL */
+@media all and (max-width: 700px) { /*600*/
+    #barra_superior {
+        grid-template-areas: 
+            "Logo"
+            "Menu"
+            "Redes";
+    }
+
+    nav ul {
+        
+        /*align-items: stretch; /* !!!! */
+        grid-template-areas: 
+            "Inicio"
+            "Rutas"
+            "Hoteles"
+            "Vuelos"
+            "Contacto";
+        grid-gap: 0.1rem;
+    }
+
+    nav ul li {        
+        border: 0.1rem solid rgb(231, 231, 231);
+        padding: 0.2rem;
+    }
+
+    nav ul li a:hover {        
+        color: #ee7463 !important;
+        text-decoration: underline !important;
+    }
+
+    nav ul li:hover {
+        border-color: #ee7463;
+    }    
+
+    #redes {
+        flex-basis:1rem;
+        justify-content: center;
+        margin-left:0px;
+        margin-bottom: 1rem;
+    }
+    #redes div {
+        height: 0px;
+    }
+
+    #banner {
+            height:10rem;           
+    }
+    
+    #banner p {
+        width:80%;
+        height:1.8rem;
+        margin-top: 5rem;
+        padding: 1rem;    
+                
+        font-size: 1rem;
+    }
+
+    #articulos{
+        grid-template-areas: 
+                "cultura"
+                "gastronomia"
+                "turismo"
+                "vida_nocturna"
+                "pie";
+    }
+
+    .columnas {
+        grid-template-areas: 
+                "col1"
+                "col2";
+        grid-gap:0rem;
+    }
+    .columnas p:first-child  {
+        margin-bottom: -0.5rem;
+    }
+}

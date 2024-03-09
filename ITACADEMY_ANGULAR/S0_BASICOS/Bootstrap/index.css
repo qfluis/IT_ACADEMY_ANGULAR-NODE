@@ -1,0 +1,15 @@
+.text-platzi {
+    color: #97c93e !important;
+}
+#header img {
+    width: 80px;
+}
+
+#footer {
+    /*background-color: rgb(82, 78, 136);*/
+    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);    
+}
+
+#footer a {
+    color: white;
+}

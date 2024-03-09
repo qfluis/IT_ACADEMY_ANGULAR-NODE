@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body{
+    font-family: Poppins;
+    background-color: #b1b1b1;
+    background-image: url("../images/tile.jpg");
+    
+   
+}
+
+.container-lg {
+    background-color: white;
+    max-width:1200px;
+    /*height: 800px;*/
+}
+.banner {
+    height:15rem;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-clip: content-box;
+}
+@media (min-width: 992px) { 
+    .marca {        
+        position:absolute;
+        top:6rem;
+        left:55%;
+    }
+}

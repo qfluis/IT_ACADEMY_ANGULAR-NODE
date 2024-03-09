@@ -1,0 +1,22 @@
+{
+  "name": "itacademy_node_s2_mongodb-estructura-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "optica.js",
+  "scripts": {
+    "optica":"mongo optica optica.js",
+    "pizzeria":"mongo pizzeria pizzeria.js",
+    "youtube":"mongo youtube youtube.js",
+    "spotify":"mongo spotify spotify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qfluis/ITAcademy_node_S2_mongoDB-estructura-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qfluis/ITAcademy_node_S2_mongoDB-estructura-/issues"
+  },
+  "homepage": "https://github.com/qfluis/ITAcademy_node_S2_mongoDB-estructura-#readme"
+}

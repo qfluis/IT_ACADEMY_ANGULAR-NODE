@@ -1,0 +1,21 @@
+{
+  "name": "s3.1_patrones",
+  "version": "1.0.0",
+  "description": "Fichero **callback_hell.js**\r ```\r npm run cbhell\r ```",
+  "main": "callback_hell.js",
+  "scripts": {
+    "cbhell": "node 1_callback_hell/callback_hell.js",
+    "singleton": "node 2_singleton/app.js",
+    "observer": "node 3_observer/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qfluis/ITAcademy_node_S3.1_patrones.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qfluis/ITAcademy_node_S3.1_patrones/issues"
+  },
+  "homepage": "https://github.com/qfluis/ITAcademy_node_S3.1_patrones#readme"
+}

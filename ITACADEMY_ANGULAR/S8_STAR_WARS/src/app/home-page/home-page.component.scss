@@ -1,0 +1,25 @@
+h2 {
+    text-align: center;
+}
+
+// https://webcode.tools/generators/css/perspective
+
+.container-sw {
+    perspective: 180px;
+    margin-bottom: 100px;
+}
+.star-wars-text {
+    //background-color: red;
+    
+    transform: rotateX(37deg) rotateY(0deg);
+    transform-style: preserve-3d;
+
+    width:100%;
+    max-width: 400px;
+    //width:500px;
+    margin: 0 auto 0 auto;
+}
+button {
+    display: block;
+    margin: 0 auto 0 auto;
+}

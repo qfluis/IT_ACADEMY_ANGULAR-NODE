@@ -1,0 +1,11 @@
+<header class="header">
+    <div><img class="header__img" src="/assets/logo_sw_white.png" height="100px" alt=""></div>
+    <div class="header__login-buttons">
+        <button *ngIf="!logedIn" routerLink="/login-page">LOG IN // SIGN UP</button>
+        <div *ngIf="logedIn">user: {{ user }}</div>
+    </div>
+    <div class="header__page-buttons">
+        <button routerLink="" routerLinkActive="header__page__button--active" [routerLinkActiveOptions]="{ exact: true }">HOME</button>
+        <button routerLink="naves" routerLinkActive="header__page__button--active">STARSHIPS</button>
+    </div>
+</header>

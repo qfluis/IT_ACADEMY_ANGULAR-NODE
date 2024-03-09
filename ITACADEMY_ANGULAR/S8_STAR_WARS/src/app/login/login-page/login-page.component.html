@@ -1,0 +1,32 @@
+<div class="background">
+    <div class="content">
+        <div class="close"><div routerLink="">X</div></div>        
+        <img src="assets/logo_sw_white.png" alt="">        
+        <h2 *ngIf="loginMode">Login</h2>
+        <h2 *ngIf="!loginMode">Signup</h2>
+
+        <div *ngIf="loginMode" class="new-user">
+            New to Star Wars Ships? <a (click)="changeLoginMode()">Create an acount</a>
+        </div>
+        <div *ngIf="!loginMode" class="new-user">
+            Do you have an account? <a (click)="changeLoginMode()">Login</a>
+        </div>
+        <hr>
+
+
+        <form [formGroup]="loginForm" (ngSubmit)="sendForm(loginForm.value)">
+            <div><label>Email:<br><input formControlName="userName" type="email"></label><br></div>
+            <div class="warning"  *ngIf="loginForm.get('userName')?.hasError('email')">Debes introducir un email válido</div>
+            <br>
+            <div><label>Password:<br><input formControlName="userPass" type="password"></label><br></div>
+            <div class="warning"  *ngIf="loginForm.get('userPass')?.hasError('minlength')">Debes introducir un valor de al menos 8 dígitos</div>
+            <button [disabled]="loginForm.invalid" class="button">
+                <span *ngIf="loginMode">Sign in</span>
+                <span *ngIf="!loginMode">Sign up</span>                
+            </button>            
+        </form>
+        <div #feedback></div>
+        
+    </div>
+</div>
+

@@ -1,0 +1,19 @@
+{
+  "name": "mongodb-queries-s2",
+  "version": "1.0.0",
+  "description": "fichero queries.js\r ```\r npm run queries\r ```",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qfluis/ITAcademy_node_S2_mongoDB-consultas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qfluis/ITAcademy_node_S2_mongoDB-consultas/issues"
+  },
+  "homepage": "https://github.com/qfluis/ITAcademy_node_S2_mongoDB-consultas#readme"
+}

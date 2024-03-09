@@ -1,0 +1,172 @@
+/* DESCKTOP */
+
+body {
+    background-color:gray;      
+}
+
+div {
+    height: 16px;
+}
+
+main {
+    background-color: white;
+    max-width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:20px;
+}
+
+header{
+    background-color: black;
+    padding:16px;
+}
+
+nav {
+    background-color: #404040;
+    padding:16px;
+    
+    display: flex;
+    gap: 16px;   
+}
+
+nav div {
+    background-color: #EA584B;
+    flex:1;    
+}
+
+#opcion_1, #opcion_3 {
+    flex:0 1 80px;
+}
+
+#sub_nav {
+    background-color: #F0763A;
+    padding: 16px;
+}
+#sub_nav div{
+    background-color: #FFCC5E;
+}
+
+article {
+    background-color: black;
+    padding:16px;
+    margin-top:16px;
+
+    display:flex;
+    gap: 16px;        
+}
+#seccion_izq {    
+    background-color:#44465E;
+    padding:16px;
+    height:auto;
+
+    flex:2;     
+}
+
+#seccion_izq .columnas{
+    height:auto; /* Si no indico height:auto se solapa con la capa inferior */
+
+    display:flex;    
+    flex-wrap: wrap;    
+    gap: 16px;      
+}
+
+#seccion_izq .columnas div {
+    background-color: #1664A4;
+    flex:1 1 250px;    
+}
+#seccion_izq .columna_simple {
+    background-color: #6399BB;
+    height:16px;
+    margin-top:16px; 
+}
+
+#seccion_der {    
+    background-color: #F94C47;
+    padding: 16px;
+
+    flex:1;
+    display:flex;    
+    gap: 8px;    
+    flex-direction:column;    
+}
+
+#seccion_der div {
+    background-color: #FFE380;
+    flex-grow: 0;
+}
+
+footer {
+    background-color: black;
+    padding: 16px;
+    margin-top:16px;
+}
+
+footer div {
+    background-color:#E4A434;
+}
+
+
+
+/* TABLET */
+@media all and (max-width: 992px) {
+    
+    article {
+        background-color: Yellow;        
+        flex-direction: column;
+    }    
+
+    #seccion_izq .columnas div {
+        flex-basis: 300px;        
+    }
+}
+
+/* Arreglo para que conserve la apariencia la parte central */
+@media all and (max-width: 738px) {
+        
+    #seccion_izq .columnas div {
+        flex-basis: 230px;
+    }
+    
+}
+
+/* MOVIL */
+
+@media all and (max-width: 600px) {
+    
+    article {
+        background-color: #FEE228;
+    }
+    #seccion_izq {
+        background-color: #09506F;
+    }
+    #seccion_izq .columna_simple {
+        background-color: #61959C;
+    }
+    #seccion_der {
+        background-color: #FD7B54;
+    }
+    #seccion_der div {
+        background-color: #FDB36B;
+    }
+
+    nav {
+        flex-direction: column;        
+    }
+
+    nav div {
+        flex-basis: 16px;
+    }
+
+    #opcion_1, #opcion_3 {
+        flex-basis: 16px;        
+    }
+        
+    #seccion_izq .columnas {
+        flex-direction: column;        
+    }
+    
+    #seccion_izq .columnas div {
+        background-color: #61959C;
+        flex-basis: 16px;
+    }    
+}

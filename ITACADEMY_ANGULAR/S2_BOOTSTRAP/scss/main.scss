@@ -1,0 +1,159 @@
+// BOOTSTRAP CUSTOM CSS
+$primary: #5265E1;   
+$secondary: #FA5959;      
+//$secondary: #E8EAF6;     
+
+/*
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;*/
+
+// SITE CUSTOM CSS
+.contenedor-imgs{
+    position:relative;
+    //top: 100px;
+    //left:100px;
+}
+.img-app, .img-feature {
+    //box-shadow: 12rem 10rem $primary;
+    //opacity:0.9;
+    
+    position:relative;
+    z-index:8;
+    //max-width: 80%;
+    
+}
+.img-sombra{
+    position: absolute;
+    width:300%;
+    height: 80%;
+    top:30%;
+    left:30%;    
+    //border-radius: 40% 0 0 40%;
+}
+
+.sombra-feature {
+    position: absolute;
+    width:300%;
+    height: 90%;
+    top:25%;
+    right: 25%;
+    //border-radius: 0 40% 40% 0;   
+}
+
+.navbar-and-contacts {
+    background-color: #242946;
+}
+
+
+
+@media (min-width: 992px) { 
+    body{
+        background-color: chartreuse;
+    }
+    .cards-custom div:nth-child(1) {
+        margin-top: 2rem;
+    }
+    
+    .cards-custom div:nth-child(2) {
+        margin-top: 4rem;
+    }
+    
+    .cards-custom div:nth-child(3) {
+        margin-top: 6rem;
+    }    
+}
+
+// BOOTSTRAP STYLES
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// OVERWRITE CSS
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: $dark;
+    border: none;
+    border-bottom:0.25rem solid $secondary;    
+}
+
+.nav-tabs .nav-link {
+    color: $gray-500;
+    border: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("/images/icon-arrow_hover.svg");           
+}
+  
+.accordion-button::after {
+    background-image: url("/images/icon-arrow.svg");
+}
+.people-joined{
+    font-weight: bold;
+    letter-spacing: 0.4rem;
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    background-image: url("/images/icon-error.svg");
+}
+
+// Active States
+.nav-link:active {
+    color: $secondary !important;
+}
+
+.btn-danger:active {
+    color: $danger;
+    background-color: white;
+}
+
+.btn-secondary:active {
+    color:$secondary !important;
+    background-color: white !important;
+}
+
+.btn-primary:active {
+    color: $primary;
+    border-color: $primary;
+    background-color: white;
+    //font-weight: bold;
+}
+
+.btn-light:active {
+    background-color: white;
+    border-color: $dark;
+}
+
+.accordion-button {
+    background-color: white !important;
+    color: $dark !important;
+}
+
+.accordion-button:active {
+    color: $secondary !important;
+}
+
+.item-menu-footer:active {
+    color:$secondary !important;
+}
+
+.facebook-icon {
+    display:inline-block;
+    width: 24px;
+    height:24px;
+    background-image: url("/images/icon-facebook.svg");
+    background-repeat: no-repeat;
+}
+
+.facebook-icon:active {
+    background-image: url("/images/icon-facebook_hover.svg");
+}
+.twitter-icon {
+    @extend .facebook-icon;
+    background-image: url("/images/icon-twitter.svg");
+}
+
+.twitter-icon:active {
+    background-image: url("/images/icon-twitter_hover.svg");
+}

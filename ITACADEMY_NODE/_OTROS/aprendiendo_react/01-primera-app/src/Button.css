@@ -1,0 +1,12 @@
+.btn {
+    transition: all 0.3s ease-in-out;
+    background-color: aqua;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+}
+
+.btn:hover {
+    background-color: blue;
+    cursor:pointer;
+}

@@ -1,0 +1,11 @@
+<div *ngIf="!iniciado">
+    <h1>Benvingut/da</h1>
+    <div class="bienvenida">
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum, earum dolorem suscipit maiores vel iure aliquid recusandae nam possimus hic molestiae est accusantium? Nobis mollitia numquam quam? Consequatur, provident?</p>
+        <img src="./assets/images/3.jpg" alt="image">
+        <button (click)="iniciar()" >Començar</button>
+    </div>
+</div>
+
+<app-escena *ngIf="iniciado" app-escena [data]="historia"></app-escena>
